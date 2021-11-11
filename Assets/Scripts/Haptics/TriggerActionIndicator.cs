@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger_ActionIndicator : MonoBehaviour
+public class TriggerActionIndicator : MonoBehaviour
 {
     private HapticsController theHapticsController;
 

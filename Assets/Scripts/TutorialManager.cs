@@ -43,14 +43,6 @@ public class TutorialManager : MonoBehaviour
 
     public PauseMenu thePauseMenu;
 
-    //public NextObstacleQueue nextObstacleQueue;
-
-    private GameObject nextObstacle;
-
-    private HapticsController theHapticsController;
-
-    private SuccessCounter successCounter;
-
     public float audioDelay;
     private float popUpDelay = 0.6f;
     private float endTimer;
@@ -88,7 +80,6 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         theScoreManager = FindObjectOfType<ScoreManager>();
-        theHapticsController = FindObjectOfType<HapticsController>();
 
         // Initiate startpoint for obstacles and visual objects in the scene
         objectsStartPoint = new Vector3[theObjectGenerators.Length];
@@ -104,25 +95,11 @@ public class TutorialManager : MonoBehaviour
         failTimer = popUpDelay;
         audioTimer = audioDelay;
         popUpIndex = 1;
-
-        //gameMixer.SetFloat("Game music volume", -80);
-
-        //theObstacleGenerator.setSpawnObstacles(false);
-
-        // Get initial next object from queue
-        //nextObstacle = nextObstacleQueue.Dequeue();
-        // Send the nextObstacle to the haptics controller
-        //theHapticsController.updateNextObstacle(nextObstacle);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(popUpIndex);
-            /*if (thePlayer.transform.position.z > distance)
-            {
-                RestartGame();
-            }*/
         if (theScoreManager.successCount == 1)
         {
             popUpIndex = 0;
@@ -258,19 +235,12 @@ public class TutorialManager : MonoBehaviour
         }
 
         thePlayer.PauseState(thePauseMenu.isActiveAndEnabled);
-
-        /*if (thePlayer.transform.position.z > nextObstacle.transform.position.z)
-        {
-            nextObstacle = nextObstacleQueue.Dequeue();
-            theHapticsController.updateNextObstacle(nextObstacle);
-        }*/
     }
 
     public void RestartGame()
     {
         theScoreManager.dead = true;
         thePlayer.gameObject.SetActive(false);
-
         theDeathMenu.gameObject.SetActive(true);
     }
 

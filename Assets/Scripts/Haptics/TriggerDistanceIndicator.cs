@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger_DistanceIndicator : MonoBehaviour
+public class TriggerDistanceIndicator : MonoBehaviour
 {
     public int myDistance;
 

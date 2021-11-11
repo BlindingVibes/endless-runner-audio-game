@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8560850111360863504}
   - component: {fileID: 8483112574349439723}
   - component: {fileID: 6343582286259685350}
-  - component: {fileID: 7091123738546320884}
   m_Layer: 0
   m_Name: SuccessfulJumpIndicator
   m_TagString: Untagged
@@ -155,18 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0c15c3eda5cdd4180c32237e6a83f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7091123738546320884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213771000955655340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c84d1bab524acc143a2ae93259d98979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3031916482234430492
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,8 +166,8 @@ GameObject:
   - component: {fileID: 33259020459027378}
   - component: {fileID: 23081977180678552}
   - component: {fileID: 777894602975871238}
-  - component: {fileID: 1774405482}
   - component: {fileID: 1774405481}
+  - component: {fileID: 6521136253344454895}
   m_Layer: 0
   m_Name: sign
   m_TagString: Untagged
@@ -266,19 +253,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 0.05, z: 0.017}
   m_Center: {x: -0.3, y: 0, z: 0.0145}
---- !u!114 &1774405482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3031916482234430492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75d5fae6b3995fd439bc20c9c6ddf117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePenalty: 10
 --- !u!114 &1774405481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +266,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!114 &6521136253344454895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031916482234430492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d5fae6b3995fd439bc20c9c6ddf117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePenalty: 10
 --- !u!1001 &2554173893232423273
 PrefabInstance:
   m_ObjectHideFlags: 0
